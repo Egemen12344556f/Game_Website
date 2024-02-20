@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff99ff, #cc00cc);
+            color: #fff;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Keyframe Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Heading Styles */
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 64px;
+            color: #6d28d9;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            animation: slideInDown 1s ease-in-out;
+        }
+
+        /* Keyframe Animation */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Input Styles */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #6d28d9;
+            border-radius: 5px;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Submit Button Styles */
+        input[type="submit"] {
+            width: 30%;
+            background-color: #6d28d9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 14px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8c35d7;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #6d28d9;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+            font-size: 18px;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 90px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav li a:hover {
+            background-color: #8c35d7;
+        }
+
+        nav li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #fff;
+            transition: width 0.3s;
+        }
+
+        nav li a:hover::after {
+            width: 100%;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            alert("Thank you! Your message has been sent. We'll get back to you really soon!");
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Contact Us!</h1>
+        <form action="/submit" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email  (Please Give An Existing Email Address)" required>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

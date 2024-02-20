@@ -1,0 +1,67 @@
+/* CSS for navigation bar */
+nav {
+  background-color: #6d28d9; /* Updated to match the page color scheme */
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Updated to match the page color scheme */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  font-size: 18px;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 90px; /* Increased padding for spacing */
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav li a:hover {
+  background-color: #373232; /* Updated to match the page color scheme */
+}
+
+/* Adding some space for the content */
+body {
+  font-family: "JetBrains Mono", monospace;
+  margin-top: 60px;
+}
+
+/* CSS for page content */
+.content {
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.right {
+  font-family: "JetBrains Mono", monospace;
+  font-size: xxx-large;
+  padding-top: 13%;
+  padding-left: 70%;
+}
+
+.p {
+  font-size: x-large;
+  padding-top: 2%;
+  padding-left: 56%;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.color {
+  color: black;
+}
